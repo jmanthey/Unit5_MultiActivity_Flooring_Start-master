@@ -28,10 +28,27 @@ public class MainActivity extends ActionBarActivity {
         activityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                /*This takes the text fields and sets them to the "EditText" variables
+                 length and width*/
+                length = (EditText) findViewById(R.id.etLength);
+                width = (EditText) findViewById(R.id.etWidth);
+
+                //This converts them to Strings
+                String lengthString = length.getText().toString();//
+                doubleLength = Double.parseDouble(lengthString);
+
+                String widthString = width.getText().toString();
+                doubleWidth = Double.parseDouble(widthString);
+
+                totalArea = doubleLength * doubleWidth;
+
+                outputString = "Width is " + doubleWidth + " and length is " + doubleLength +
+                        " and flooring needed is " + totalArea;
+
                 Intent startIntent = new Intent(getApplicationContext(),
                         Main2Activity.class);
-                startIntent.putExtra("edu.css.MESSAGE", " " +
-                        outputString );
+                startIntent.putExtra("edu.css.MESSAGE", outputString );
                 startActivity(startIntent);
             }
         });
@@ -60,22 +77,5 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void OnClickTwo(View v) {
 
-        length = (EditText) findViewById(R.id.etLength);
-        width = (EditText) findViewById(R.id.etWidth);
-
-        String lengthString = length.getText().toString();
-        doubleLength = Double.parseDouble(lengthString);
-
-        String widthString = width.getText().toString();
-        doubleWidth = Double.parseDouble(widthString);
-
-        totalArea = doubleLength * doubleWidth;
-
-        outputString = "Width is" + doubleWidth + " and length is " + doubleLength +
-                " and flooring needed is " + totalArea;
-
-
-    }
 }
