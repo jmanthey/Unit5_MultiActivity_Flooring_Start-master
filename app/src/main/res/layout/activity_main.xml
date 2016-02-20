@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Room Width"
+        android:text="@string/roomWidth"
         android:id="@+id/textView1"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Room Length"
+        android:text="@string/roomLength"
         android:id="@+id/textView2"
         android:layout_below="@+id/etWidth"
         android:layout_alignParentStart="true" />
@@ -42,7 +42,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Results"
+        android:text="@string/showResults"
         android:id="@+id/btnShowResults"
 
         android:layout_below="@+id/etLength"
